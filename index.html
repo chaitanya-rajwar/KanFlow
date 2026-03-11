@@ -347,8 +347,35 @@
     font-size: 1rem;
   }
 
+  /* FEATURES BANNER */
+  .features-banner {
+    display: flex;
+    gap: 10px;
+    padding: 14px 32px;
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+    scrollbar-width: none;
+    background: var(--surface);
+  }
+  .features-banner::-webkit-scrollbar { display: none; }
+  .feature-pill {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 0.78rem;
+    white-space: nowrap;
+    color: var(--muted);
+    font-weight: 500;
+  }
+  .feature-pill span { font-size: 0.95rem; }
+
   @media (max-width: 600px) {
     header { padding: 14px 16px; }
+    .features-banner { padding: 10px 16px; }
     .board-wrap { padding: 16px; }
     .board { grid-template-columns: 1fr; }
     .search-box { width: 130px; }
@@ -369,6 +396,17 @@
   <div class="stats" id="stats"></div>
   <p class="board-title">My Workspace</p>
   <div class="board" id="board"></div>
+</div>
+
+<div class="features-banner">
+  <div class="feature-pill"><span>➕</span> Add Tasks</div>
+  <div class="feature-pill"><span>✏️</span> Edit & Delete</div>
+  <div class="feature-pill"><span>🖱️</span> Drag & Drop between columns</div>
+  <div class="feature-pill"><span>🔍</span> Search tasks</div>
+  <div class="feature-pill"><span>🔴🟡🟢</span> Priority labels</div>
+  <div class="feature-pill"><span>💾</span> Auto-saves after refresh</div>
+  <div class="feature-pill"><span>🌓</span> Dark / Light theme</div>
+  <div class="feature-pill"><span>📱</span> Mobile friendly</div>
 </div>
 
 <div id="modal-overlay" class="modal-overlay" style="display:none">
